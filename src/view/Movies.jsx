@@ -6,8 +6,8 @@ import { StoreContext } from '../context/Store.jsx'
 
 const Movies = () => {
 
-  
-   const {  input, setInput, loadData } = useContext(StoreContext)
+
+   const {  input, setInput ,loadData } = useContext(StoreContext)
 
   return (
     <>
@@ -20,7 +20,7 @@ const Movies = () => {
           <p className='text-white text-xl md:text-2xl font-bold mt-4'>Watch anywhere. Cancel anytime.</p>
           <button className='mt-6 bg-red-600 hover:bg-red-700 text-white font-bold py-2 cursor-pointer px-4 rounded'>Get Started</button>  
         </div>
-        <div className='absolute w-[40vw] flex justify-center items-center px-4 p-3 rounded-full bottom-10 bg-gray-600 '>
+        <div className='absolute w-[80vw] md:w-[60vw] lg:w-[40vw] xl:w-[40vw] flex justify-center items-center px-4 p-3 rounded-full bottom-10 bg-gray-600 '>
           <input type="text" placeholder='Search for movies, TV shows...' className='w-full h-12 p-2 pl-4 rounded-full bg-white outline-none text-black inline' value={input} onChange={(e)=>setInput(e.target.value)}/>
           <Link to='/result'>
             <button className='ml-2 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full cursor-pointer ' onClick={()=>loadData({ movie: input })}>Search</button>

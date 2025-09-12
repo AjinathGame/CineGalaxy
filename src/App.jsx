@@ -9,6 +9,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Movies />} />
         <Route path='/result' element={<Result />} />
+        <Route path='*' element={<h1 className='text-black m-auto text-[4rem] font-bold flex items-center justify-center mt-[350px]'>Page not found</h1>} />
       </Routes>
     </BrowserRouter>
   )
