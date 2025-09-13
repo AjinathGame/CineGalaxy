@@ -4,9 +4,14 @@ import { StoreContext } from '../context/Store.jsx'
 const Result = () => {
   const { movies, notFound } = useContext(StoreContext)
 
+  if(!movies.Title && !notFound){
+    return null
+  }
+
   if (notFound || !movies.Title) {
     return <h1 className='text-black m-auto text-[4rem] font-bold flex items-center justify-center mt-[350px]'>Movie not found</h1>
   }
+  
   
 
   return (
