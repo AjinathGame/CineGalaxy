@@ -1,12 +1,13 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { StoreContext } from '../context/Store.jsx'
 
 const Result = () => {
   const { movies, notFound } = useContext(StoreContext)
 
-  if (notFound) {
+  if (notFound || !movies.Title) {
     return <h1 className='text-black m-auto text-[4rem] font-bold flex items-center justify-center mt-[350px]'>Movie not found</h1>
   }
+  
 
   return (
 
@@ -41,5 +42,6 @@ const Result = () => {
     </div>
   )
 }
+
 
 export default Result
